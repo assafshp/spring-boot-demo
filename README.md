@@ -47,14 +47,13 @@ public class HelloController {
 19. go to the root dir of the new application and run ```./mvnw package -DskipTests``` to build the jar (ignore tests folder)
 20. go to the root dir of the new application and run ```java -jar target/demo-0.0.1-SNAPSHOT.jar```
 21. the application should run and you should be able to browse to it via http://localhost:8080
+22. if you get a java error: UnsupportedClassVersionError: com/example/demo/DemoApplication has been compiled by a more recent version of the Java Runtime, then, you should run ```echo $JAVA_HOME```
+23. this should return the path to the java installation, usually: /Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home
+24. If this is not the java version (in our case we need java 11) then 
+25. run the command: ```export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home```
+26. this will tell java to run version 11
+27. to ensure that, run ```java -version``` and ensure you get "openjdk version "11.0.8" 2020-07-14"
+28. Now, re-run ```java -jar target/demo-0.0.1-SNAPSHOT.jar```
+29. The jar should be app and running and the application is launched on port 8080
 
 
-# Java Issues
-
-which java
-
-
-/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
-
-echo $JAVA_HOME
-export JAVA_HOME
