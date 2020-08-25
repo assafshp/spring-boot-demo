@@ -44,7 +44,9 @@ public class HelloController {
 16. Run the application using Func + F5 (or Run & Debug)
 17. The application should be launched
 18. Navigate to http://localhost:8080 , you should see "Demo Hello World"
-19. 
+19. go to the root dir of the new application and run ```./mvnw package -DskipTests``` to build the jar (ignore tests folder)
+20. go to the root dir of the new application and run ```java -jar target/demo-0.0.1-SNAPSHOT.jar```
+21. the application should run and you should be able to browse to it via http://localhost:8080
 
 
 # Java Issues
