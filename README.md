@@ -25,11 +25,29 @@ In this repo you'll find insturctions to create a simple spring boot web applica
 12. Go to pom.xml file
 13. Right click on the file -> Add starters - ensure all dependecies exists
 14. Go to DemoApplication.java file
-15. Add new file next to it (in the same directory) called - HelloController.java
+15. Add new file next to it (in the same directory) called - HelloController.java - this is the code
+
+```
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+
+    @RequestMapping("/")
+    public String index(){
+        return "Demo Hello World";
+    }
+    
+}
+```
+16. Run the application using Func + F5 (or Run & Debug)
+17. The application should be launched
+18. Navigate to http://localhost:8080 , you should see "Demo Hello World"
+19. 
 
 
-
-
+# Java Issues
 
 which java
 
